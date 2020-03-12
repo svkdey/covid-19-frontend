@@ -17,4 +17,5 @@ function groupBy(list, keyGetter) {
   });
   return map;
 }
+
 export { isEmpty, groupBy };
