@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import ReactMapGL, { Marker, GeolocateControl } from "react-map-gl";
+import ReactMapGL, { Marker } from "react-map-gl";
+// import ToolTip from "./switch/ToolTip";
 
 class MapComponent extends Component {
   pointsOnMap(points) {
@@ -12,21 +13,20 @@ class MapComponent extends Component {
           offsetLeft={-20}
           offsetTop={-10}
         >
-          <div className="mark"></div>
+          <div className="mark">{/* <ToolTip /> */}</div>
         </Marker>
       );
     });
   }
   render() {
-    console.log(this.props);
     var points = this.props.data.death;
     return (
       <ReactMapGL
-        mapboxApiAccessToken="pk.eyJ1Ijoic3ZrZGV5IiwiYSI6ImNrN203OGxhazA2M2ozaXBqc2tjcGFjMWUifQ.DOdIz6qfGAziOZR31GHxVA"
+        mapboxApiAccessToken={process.env.REACT_APP_API_GRAPH}
         latitude={10}
         longitude={30}
         width="100%"
-        height="55vh"
+        height="95%"
         onViewportChange={viewport => this.setState({ viewport })}
         zoom={0.5}
       >

@@ -4,18 +4,30 @@ function isEmpty(obj) {
   }
   return true;
 }
-function groupBy(list, keyGetter) {
-  const map = new Map();
-  list.forEach(item => {
-    const key = keyGetter(item);
-    const collection = map.get(key);
-    if (!collection) {
-      map.set(key, [item]);
-    } else {
-      collection.push(item);
-    }
+
+const groupBy = (items, key) =>
+  items.reduce(
+    (result, item) => ({
+      ...result,
+      [item[key]]: [...(result[item[key]] || []), item]
+    }),
+    {}
+  );
+function groupByID(list) {
+  var groupedMap = list ? groupBy(list, "country") : [];
+  var result = {};
+  for (var i in groupedMap) {
+    var sum = sumList(groupedMap[i]);
+    result[i] = sum;
+  }
+  return result;
+}
+function sumList(list) {
+  var sum = 0;
+  list.forEach(i => {
+    sum += i.latestTotal;
   });
-  return map;
+  return sum;
 }
 
-export { isEmpty, groupBy };
+export { isEmpty, groupBy, groupByID, sumList };
