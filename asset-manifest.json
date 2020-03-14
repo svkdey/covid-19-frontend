@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/svkdey/covid-19-dashboard-visual/static/css/main.42cb976a.chunk.css",
+    "main.js": "/svkdey/covid-19-dashboard-visual/static/js/main.01675103.chunk.js",
+    "main.js.map": "/svkdey/covid-19-dashboard-visual/static/js/main.01675103.chunk.js.map",
+    "runtime-main.js": "/svkdey/covid-19-dashboard-visual/static/js/runtime-main.546e4a6b.js",
+    "runtime-main.js.map": "/svkdey/covid-19-dashboard-visual/static/js/runtime-main.546e4a6b.js.map",
+    "static/js/2.bb9c8e25.chunk.js": "/svkdey/covid-19-dashboard-visual/static/js/2.bb9c8e25.chunk.js",
+    "static/js/2.bb9c8e25.chunk.js.map": "/svkdey/covid-19-dashboard-visual/static/js/2.bb9c8e25.chunk.js.map",
+    "index.html": "/svkdey/covid-19-dashboard-visual/index.html",
+    "precache-manifest.4b402c7bb72a3cb386ba68f93941189f.js": "/svkdey/covid-19-dashboard-visual/precache-manifest.4b402c7bb72a3cb386ba68f93941189f.js",
+    "service-worker.js": "/svkdey/covid-19-dashboard-visual/service-worker.js",
+    "static/css/main.42cb976a.chunk.css.map": "/svkdey/covid-19-dashboard-visual/static/css/main.42cb976a.chunk.css.map",
+    "static/js/2.bb9c8e25.chunk.js.LICENSE.txt": "/svkdey/covid-19-dashboard-visual/static/js/2.bb9c8e25.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.546e4a6b.js",
+    "static/js/2.bb9c8e25.chunk.js",
+    "static/css/main.42cb976a.chunk.css",
+    "static/js/main.01675103.chunk.js"
+  ]
+}
