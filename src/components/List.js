@@ -14,7 +14,7 @@ export default function List(props) {
     }
   };
   return (
-    <div>
+    <div className={props.nameClass}>
       <div className="total-result">
         Total <span style={{ color: props.highlightColor }}>{props.type}</span>{" "}
         case : {props.sum}

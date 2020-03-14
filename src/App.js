@@ -44,7 +44,8 @@ class App extends React.Component {
     if (this.state.loading)
       return (
         <div>
-          <Loading type="Bars" color="red" />;<h1>Loading</h1>
+          <Loading type="Bars" color="red" />
+          <h1>Loading</h1>
         </div>
       );
     else {
@@ -56,6 +57,7 @@ class App extends React.Component {
           <div className="container">
             <div className="left-20">
               <List
+                nameClass="h-2"
                 type={"Comfirmed"}
                 data={Object.entries(groupByconfirmCase).sort(
                   (a, b) => b[1] - a[1]
@@ -108,6 +110,7 @@ class App extends React.Component {
             </div>
             <div className="right-20">
               <List
+                nameClass="h-1"
                 type={"Death"}
                 data={Object.entries(groupBydeathCase).sort(
                   (a, b) => b[1] - a[1]
@@ -117,6 +120,7 @@ class App extends React.Component {
                 highlightColor={"red"}
               />
               <List
+                nameClass="h-1"
                 type={"Recovered"}
                 data={Object.entries(groupByrecoveryCase).sort(
                   (a, b) => b[1] - a[1]
