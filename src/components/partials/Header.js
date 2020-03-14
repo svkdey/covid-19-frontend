@@ -4,7 +4,11 @@ export default function Header() {
   return (
     <div className="header-container">
       <div className="header-container-left">COVID-19 Dashboard</div>
-      <div className="header-container-right">{/* <SwitchComponent /> */}</div>
+      <div className="header-container-right">
+        <a href="https://github.com/svkdey/covid-19-frontend">
+          <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   );
 }

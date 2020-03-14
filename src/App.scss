@@ -70,7 +70,7 @@ tside {
   }
   .header-container-right {
     width: 5%;
-    align-self: flex-end;
+    // align-self: flex-end;
   }
 }
 // tooltip.
@@ -266,4 +266,69 @@ tside {
 .graph {
   width: 30%;
   margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: 0.8rem;
+  }
+  .container {
+    width: 100%;
+    height: 95vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    z-index: 10;
+    text-overflow: ellipsis;
+    width: 120px;
+  }
+  .left-20 {
+    order: 2;
+    // width: 20%;
+    height: 25vh;
+    margin: 0;
+    width: 100%;
+  }
+  .right-20 {
+    order: 2;
+    height: 25vh;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+  .mid-60 {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 2rem 0;
+    .upper-60 {
+      height: 30vh;
+      width: 100%;
+      margin: auto;
+    }
+    .lower-40 {
+      display: none;
+      // flex-direction: column;
+      // margin: 1rem auto;
+      // width: 100%;
+    }
+  }
+  .h-2 {
+    margin-bottom: 5rem;
+  }
+  .h-1 {
+    width: 50%;
+  }
+  .scroller {
+    overflow: auto;
+    margin: 1rem 0;
+    height: 18vh !important;
+    // height: 80vh;
+    // scroll
+  }
 }

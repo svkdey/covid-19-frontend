@@ -14,7 +14,7 @@ class ToolTip extends Component {
         <div>{this.props.deathData.country}</div>
         <div>Confirm: {this.props.confirmData}</div>
         <div>Deaths: {this.props.deathData.latestTotal}</div>
-        <div>Deaths: {this.props.recoverData}</div>
+        <div>Recovered: {this.props.recoverData}</div>
       </div>
     );
   }
