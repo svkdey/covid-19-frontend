@@ -3,7 +3,7 @@ var url = process.env.REACT_APP_API_URL;
 export function deathCases() {
   console.log(url);
   var request = axios
-    .get("corona-data-death")
+    .get("https://covid19-dashboard-backend.herokuapp.com/corona-data-death")
     .then(res => {
       // console.log(res);
       // var groupedData = groupBy(res.data, data => data.country);
@@ -18,7 +18,7 @@ export function deathCases() {
 }
 export function confirmCases() {
   var request = axios
-    .get("corona-data-confirm")
+    .get("https://covid19-dashboard-backend.herokuapp.com/corona-data-confirm")
     .then(res => {
       // console.log(res);
       // var groupedData = groupBy(res.data, data => data.country);
@@ -33,7 +33,7 @@ export function confirmCases() {
 }
 export function recoveryCases() {
   var request = axios
-    .get("corona-data-recover")
+    .get("https://covid19-dashboard-backend.herokuapp.com/corona-data-recover")
     .then(res => {
       // console.log(res);
       // var groupedData = groupBy(res.data, data => data.country);
