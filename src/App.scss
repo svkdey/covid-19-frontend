@@ -12,6 +12,30 @@ $teriary-light: #222;
 
 $darl: rgb(41, 10, 3);
 
+.leaflet-container {
+  height: 95%;
+  width: 100%;
+}
+.state {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: black;
+}
+.death {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: red;
+}
+.confirm {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: blue;
+}
+.recover {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: green;
+}
 html,
 body {
   font-family: Helvetica;

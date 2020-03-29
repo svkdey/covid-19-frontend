@@ -9,11 +9,11 @@ import {
 } from "./actions/corona_data_actions";
 import _ from "lodash";
 import { isEmpty, groupByID } from "./utils";
-import MapComponent from "./components/MapComponent";
 import Header from "./components/partials/Header";
 import List from "./components/List";
 import BarGraph from "./components/BarGraph";
 import Loading from "./components/Loading";
+import MapGraph from "./components/MapGraph";
 class App extends React.Component {
   constructor() {
     super();
@@ -49,6 +49,7 @@ class App extends React.Component {
         </div>
       );
     else {
+      // <SimpleExample />;
       return (
         <div>
           <div>
@@ -69,7 +70,7 @@ class App extends React.Component {
             </div>
             <div className="mid-60">
               <div className="upper-60">
-                <MapComponent data={deathData} />
+                <MapGraph data={deathData} />
               </div>
               <div className="lower-40">
                 <BarGraph
@@ -105,7 +106,6 @@ class App extends React.Component {
                   hoverBackgroundColor="rgba(54, 204, 51,0.4)"
                   hoverBorderColor="rgba(54, 204, 51,1)"
                 />
-                {/* <BarGraph type={"line"} /> */}
               </div>
             </div>
             <div className="right-20">
