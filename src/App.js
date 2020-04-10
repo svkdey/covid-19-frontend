@@ -7,8 +7,8 @@ import {
   recoveryCases
 } from "./actions/corona_data_actions";
 import { fetchNews } from "./actions/news";
-import _ from "lodash";
-import { isEmpty, groupByID } from "./utils";
+// import _ from "lodash";
+import { groupByID } from "./utils";
 import Header from "./components/partials/Header";
 import List from "./components/List";
 import BarGraphComponent from "./components/BarGraphComponent";
@@ -62,10 +62,8 @@ class App extends React.Component {
             <div className="left-20">
               <List
                 nameClass="h-2"
-                type={"Comfirmed"}
                 confirm={groupByconfirmCase}
                 confirmsum={this.sumOfObject(groupByconfirmCase)}
-                type={"Death"}
                 death={groupBydeathCase}
                 deathsum={this.sumOfObject(groupBydeathCase)}
                 recovery={groupByrecoveryCase}

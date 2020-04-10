@@ -1,5 +1,5 @@
 import axios from "axios";
-var url = process.env.REACT_APP_API_URL;
+// var url = process.env.REACT_APP_API_URL;
 export function deathCases() {
   return async dispatch => {
     try {
@@ -15,23 +15,6 @@ export function deathCases() {
       console.log(error);
     }
   };
-  // console.log(url);
-  // setDeathLoading();
-  // var request = axios
-  //   .get(
-  //     "https://cors-anywhere.herokuapp.com/http://covid19-dashboard-backend.herokuapp.com/corona-data-death"
-  //   )
-  //   .then(res => {
-  //     // console.log(res);
-  //     // var groupedData = groupBy(res.data, data => data.country);
-  //     // console.log(groupedData);
-  //     return res.data;
-  //   })
-  //   .catch(err => console.log(err));
-  // return {
-  //   type: "DEATH_CASES",
-  //   payload: request
-  // };
 }
 export const setDeathLoading = () => {
   return {
@@ -53,22 +36,6 @@ export function confirmCases() {
       console.log(error);
     }
   };
-
-  // var request = axios
-  //   .get(
-  //     "https://cors-anywhere.herokuapp.com/https://covid19-dashboard-backend.herokuapp.com/corona-data-confirm"
-  //   )
-  //   .then(res => {
-  //     // console.log(res);
-  //     // var groupedData = groupBy(res.data, data => data.country);
-  //     // console.log(groupedData);
-  //     return res.data;
-  //   })
-  //   .catch(err => console.log(err));
-  // return {
-  //   type: "CONFIRM_CASES",
-  //   payload: request
-  // };
 }
 export const setConfirmLoading = () => {
   return {
@@ -90,22 +57,6 @@ export function recoveryCases() {
       console.log(error);
     }
   };
-  // setRecoveryLoading();
-  // var request = axios
-  //   .get(
-  //     "https://cors-anywhere.herokuapp.com/http://covid19-dashboard-backend.herokuapp.com/corona-data-recover"
-  //   )
-  //   .then(res => {
-  //     // console.log(res);
-  //     // var groupedData = groupBy(res.data, data => data.country);
-  //     // console.log(groupedData);
-  //     return res.data;
-  //   })
-  //   .catch(err => console.log(err));
-  // return {
-  //   type: "RECOVERY_CASES",
-  //   payload: request
-  // };
 }
 export const setRecoveryLoading = () => {
   return {
