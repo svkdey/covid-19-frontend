@@ -10,39 +10,11 @@ $secondary-light: #ffdde9;
 $teriary-main: rgb(255, 252, 237);
 $teriary-dark: rgb(255, 239, 228);
 $teriary-light: #222;
+$orange: orange;
 $green: #65e670;
 $red: #c7312c;
 $darl: rgb(41, 10, 3);
-$gradient-color: linear-gradient(
-  90deg,
-  rgba(255, 88, 88, 0.8),
-  rgba(240, 152, 25, 0.8)
-);
 
-.leaflet-container {
-  height: 95%;
-  width: 100%;
-}
-.state {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: black;
-}
-.death {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: red;
-}
-.confirm {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: blue;
-}
-.recover {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: green;
-}
 html,
 body {
   font-family: Helvetica;
@@ -54,10 +26,35 @@ body {
   letter-spacing: 0.3px;
 
   line-height: 1.2rem;
-  background-color: #eee;
+  // background-color: #656f86;
 
   // color: #eee;
   // margin: 0.2%;
+}
+
+.leaflet-container {
+  height: 95%;
+  width: 100%;
+}
+.state {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $teriary-light;
+}
+.death {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $red;
+}
+.confirm {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $orange;
+}
+.recover {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $green;
 }
 
 a {
@@ -77,7 +74,9 @@ tside {
   box-shadow: 0px 0px 3px 2px #747de8;
   animation: glow 1.5s linear infinite alternate;
 }
-
+.scroller-fix {
+  overflow: auto;
+}
 @keyframes glow {
   to {
     box-shadow: 0px 0px 1px 2px red;
@@ -111,7 +110,7 @@ tside {
   margin: 0rem 0rem;
 }
 .box .confirmCls {
-  color: orange;
+  color: $orange;
 }
 .box .deadCls {
   color: $red;
@@ -133,7 +132,7 @@ tside {
   display: flex;
   flex-direction: row;
   height: 6vh;
-  background-color: $teriary-light;
+  background-color: $primary-main;
   color: white;
   align-items: center;
   width: 100%;
@@ -147,7 +146,6 @@ tside {
   }
   .header-container-right {
     width: 5%;
-    // align-self: flex-end;
   }
 }
 // tooltip.
@@ -172,10 +170,13 @@ tside {
   position: relative;
   // z-index: 5;
 }
-.scroller-fix {
-  overflow: auto;
-}
 
+/* Show the tooltip text when you mouse over the tooltip container */
+// .tooltip:hover .tooltiptext {
+//   visibility: visible;
+//   z-index: 10;
+//   width: 250px;
+// }
 @media only screen and (min-width: 1490px) {
   html,
   body {

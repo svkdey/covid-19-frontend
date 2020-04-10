@@ -27,29 +27,35 @@ class MapGraph extends React.Component {
                   {point.country && point.state ? "," : ""}
                 </div>
                 {point.country}
-                <div className="confirm">
+                <div>
                   Confirm:
-                  {this.findByDataByLocation(
-                    this.props.data.confirm,
-                    point.lat,
-                    point.lon
-                  )}
+                  <span className="confirm">
+                    {this.findByDataByLocation(
+                      this.props.data.confirm,
+                      point.lat,
+                      point.lon
+                    )}
+                  </span>
                 </div>
-                <div className="death">
+                <div>
                   Deaths:
-                  {this.findByDataByLocation(
-                    this.props.data.death,
-                    point.lat,
-                    point.lon
-                  )}
+                  <span className="death">
+                    {this.findByDataByLocation(
+                      this.props.data.death,
+                      point.lat,
+                      point.lon
+                    )}
+                  </span>
                 </div>
-                <div className="recover">
+                <div>
                   Recovered:
-                  {this.findByDataByLocation(
-                    this.props.data.recovery,
-                    point.lat,
-                    point.lon
-                  )}
+                  <span className="recover">
+                    {this.findByDataByLocation(
+                      this.props.data.recovery,
+                      point.lat,
+                      point.lon
+                    )}
+                  </span>
                 </div>
               </Popup>
             </Marker>
