@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function List(props) {
+  console.log(props);
   const fetchListData = () => {
     if (props.data) {
       return props.data.map((element, key) => {

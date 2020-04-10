@@ -59,10 +59,13 @@ class App extends React.Component {
               <List
                 nameClass="h-2"
                 type={"Comfirmed"}
-                data={Object.entries(groupByconfirmCase).sort(
-                  (a, b) => b[1] - a[1]
-                )}
-                sum={this.sumOfObject(groupByconfirmCase)}
+                confirm={this.props.confirm}
+                confirmsum={this.sumOfObject(groupByconfirmCase)}
+                type={"Death"}
+                death={this.props.death}
+                deathsum={this.sumOfObject(groupBydeathCase)}
+                recovery={this.props.recovery}
+                recoversum={this.sumOfObject(groupByrecoveryCase)}
                 height="82vh"
                 highlightColor={"blue"}
               />
@@ -85,28 +88,7 @@ class App extends React.Component {
                 />
               </div>
             </div>
-            <div className="right-20">
-              <List
-                nameClass="h-1"
-                type={"Death"}
-                data={Object.entries(groupBydeathCase).sort(
-                  (a, b) => b[1] - a[1]
-                )}
-                sum={this.sumOfObject(groupBydeathCase)}
-                height="36vh"
-                highlightColor={"red"}
-              />
-              <List
-                nameClass="h-1"
-                type={"Recovered"}
-                data={Object.entries(groupByrecoveryCase).sort(
-                  (a, b) => b[1] - a[1]
-                )}
-                sum={this.sumOfObject(groupByrecoveryCase)}
-                height="36vh"
-                highlightColor={"green"}
-              />
-            </div>
+            <div className="right-20"></div>
           </div>
         </div>
       );
