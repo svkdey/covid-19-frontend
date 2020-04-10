@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./App.scss";
 import { connect } from "react-redux";
 import {
@@ -45,18 +44,17 @@ class App extends React.Component {
     var groupByconfirmCase = groupByID(this.props.confirm);
     var groupBydeathCase = groupByID(this.props.death);
     var groupByrecoveryCase = groupByID(this.props.recovery);
-    console.log(news);
-    if (this.state.loading)
+    const {
+      deathLoading,
+      confirmLoading,
+      recoveryLoading,
+      newsLoading
+    } = this.props;
+    if (deathLoading || confirmLoading || recoveryLoading || newsLoading) {
+      return <Loading />;
+    } else {
       return (
-        <div>
-          <Loading type="Bars" color="red" />
-          <h1>Loading</h1>
-        </div>
-      );
-    else {
-      // <SimpleExample />;
-      return (
-        <div>
+        <div className="wrapper">
           <div>
             <Header />
           </div>
@@ -101,6 +99,18 @@ class App extends React.Component {
         </div>
       );
     }
+    // console.log(news);
+    // if (this.state.loading)
+    //   return (
+    //     <div>
+    //       <Loading type="Bars" color="red" />
+    //       <h1>Loading</h1>
+    //     </div>
+    //   );
+    // else {
+    //   // <SimpleExample />;
+    //  ;
+    // }
   }
 }
 const mapStateToProps = (state, ownProps) => {
@@ -109,7 +119,11 @@ const mapStateToProps = (state, ownProps) => {
     death: state.coronaData.death,
     confirm: state.coronaData.confirm,
     recovery: state.coronaData.recovery,
-    news: state.news
+    news: state.news,
+    deathLoading: state.coronaData.deathLoading,
+    confirmLoading: state.coronaData.confirmLoading,
+    recoveryLoading: state.coronaData.recoveryLoading,
+    newsLoading: state.news.newsLoading
   };
 };
 export default connect(mapStateToProps)(App);
