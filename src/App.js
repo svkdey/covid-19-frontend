@@ -12,7 +12,7 @@ import { isEmpty, groupByID } from "./utils";
 import MapComponent from "./components/MapComponent";
 import Header from "./components/partials/Header";
 import List from "./components/List";
-import BarGraph from "./components/BarGraph";
+import BarGraphComponent from "./components/BarGraphComponent";
 import Loading from "./components/Loading";
 class App extends React.Component {
   constructor() {
@@ -72,40 +72,17 @@ class App extends React.Component {
                 <MapComponent data={deathData} />
               </div>
               <div className="lower-40">
-                <BarGraph
-                  type={"bar"}
-                  data={Object.entries(groupByconfirmCase)
+                <BarGraphComponent
+                  confirm={Object.entries(groupByconfirmCase)
                     .sort((a, b) => b[1] - a[1])
                     .slice(0, 10)}
-                  label="Confirm Cases"
-                  backgroundColor="rgba(15, 0, 186,1)"
-                  borderColor="rgba(15, 0, 186,1)"
-                  hoverBackgroundColor="rgba(15, 0, 186,1)"
-                  hoverBorderColor="rgba(15, 0, 186,1)"
-                />
-                <BarGraph
-                  type={"bar"}
-                  data={Object.entries(groupBydeathCase)
+                  death={Object.entries(groupBydeathCase)
                     .sort((a, b) => b[1] - a[1])
                     .slice(0, 15)}
-                  label="Death Cases"
-                  backgroundColor="rgba(186, 0, 0,1)"
-                  borderColor="rgba(186, 0, 0,1)"
-                  hoverBackgroundColor="rgba(186, 0, 0,1)"
-                  hoverBorderColor="rgba(186, 0, 0,1)"
-                />
-                <BarGraph
-                  type={"bar"}
-                  data={Object.entries(groupByrecoveryCase)
+                  recovery={Object.entries(groupByrecoveryCase)
                     .sort((a, b) => b[1] - a[1])
                     .slice(0, 15)}
-                  label="Recovered Cases"
-                  backgroundColor="rgba(54, 204, 51,1)"
-                  borderColor="rgba(54, 204, 51,1)"
-                  hoverBackgroundColor="rgba(54, 204, 51,0.4)"
-                  hoverBorderColor="rgba(54, 204, 51,1)"
                 />
-                {/* <BarGraph type={"line"} /> */}
               </div>
             </div>
             <div className="right-20">
