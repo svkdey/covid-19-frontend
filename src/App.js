@@ -9,11 +9,11 @@ import {
 } from "./actions/corona_data_actions";
 import _ from "lodash";
 import { isEmpty, groupByID } from "./utils";
-import MapComponent from "./components/MapComponent";
 import Header from "./components/partials/Header";
 import List from "./components/List";
 import BarGraphComponent from "./components/BarGraphComponent";
 import Loading from "./components/Loading";
+import MapGraph from "./components/MapGraph";
 class App extends React.Component {
   constructor() {
     super();
@@ -49,22 +49,23 @@ class App extends React.Component {
         </div>
       );
     else {
+      // <SimpleExample />;
       return (
         <div>
           <div>
             <Header />
           </div>
-          <div className="container">
+          <div className="main-container">
             <div className="left-20">
               <List
                 nameClass="h-2"
                 type={"Comfirmed"}
-                confirm={this.props.confirm}
+                confirm={groupByconfirmCase}
                 confirmsum={this.sumOfObject(groupByconfirmCase)}
                 type={"Death"}
-                death={this.props.death}
+                death={groupBydeathCase}
                 deathsum={this.sumOfObject(groupBydeathCase)}
-                recovery={this.props.recovery}
+                recovery={groupByrecoveryCase}
                 recoversum={this.sumOfObject(groupByrecoveryCase)}
                 height="82vh"
                 highlightColor={"blue"}
@@ -72,7 +73,7 @@ class App extends React.Component {
             </div>
             <div className="mid-60">
               <div className="upper-60">
-                <MapComponent data={deathData} />
+                <MapGraph data={deathData} />
               </div>
               <div className="lower-40">
                 <BarGraphComponent
