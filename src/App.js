@@ -7,6 +7,7 @@ import {
   confirmCases,
   recoveryCases
 } from "./actions/corona_data_actions";
+import { fetchNews } from "./actions/news";
 import _ from "lodash";
 import { isEmpty, groupByID } from "./utils";
 import Header from "./components/partials/Header";
@@ -14,6 +15,7 @@ import List from "./components/List";
 import BarGraphComponent from "./components/BarGraphComponent";
 import Loading from "./components/Loading";
 import MapGraph from "./components/MapGraph";
+import ListOfCard from "./components/ListOfCard";
 class App extends React.Component {
   constructor() {
     super();
@@ -25,6 +27,7 @@ class App extends React.Component {
     this.props.dispatch(deathCases());
     this.props.dispatch(confirmCases());
     this.props.dispatch(recoveryCases());
+    this.props.dispatch(fetchNews());
     this.setState({ loading: false });
   }
   sumOfObject(obj) {
@@ -37,10 +40,12 @@ class App extends React.Component {
     return sum;
   }
   render() {
+    var news = this.props.news.news;
     var deathData = this.props;
     var groupByconfirmCase = groupByID(this.props.confirm);
     var groupBydeathCase = groupByID(this.props.death);
     var groupByrecoveryCase = groupByID(this.props.recovery);
+    console.log(news);
     if (this.state.loading)
       return (
         <div>
@@ -89,7 +94,9 @@ class App extends React.Component {
                 />
               </div>
             </div>
-            <div className="right-20"></div>
+            <div className="right-20">
+              <ListOfCard news={news} height="85vh" />
+            </div>
           </div>
         </div>
       );
@@ -101,7 +108,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     death: state.coronaData.death,
     confirm: state.coronaData.confirm,
-    recovery: state.coronaData.recovery
+    recovery: state.coronaData.recovery,
+    news: state.news
   };
 };
 export default connect(mapStateToProps)(App);

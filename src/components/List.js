@@ -18,7 +18,7 @@ export default function List(props) {
   };
   const fetchHeading = (confirmsum, deathsum, recoversum) => {
     return (
-      <div class="list-heading">
+      <div className="list-heading">
         <Box type={"Confirmed"} nameClass={"confirmCls"} total={confirmsum} />
         <Box type={"Deaths"} nameClass={"deadCls"} total={deathsum} />
         <Box type={"Recoveries"} nameClass={"recoverdCls"} total={recoversum} />
@@ -29,9 +29,9 @@ export default function List(props) {
     return (
       <ListGroup>
         {data.length > 0
-          ? data.map(item => {
+          ? data.map((item, key) => {
               return (
-                <ListGroupItem>
+                <ListGroupItem key={key}>
                   {/* {item.name} */}
                   <div className="listgroupItem-heading ">{item.name}</div>
                   <div className="listgroupItem">

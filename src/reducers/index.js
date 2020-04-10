@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import coronaData from "./corona_data_reducer";
-import tweets from "./tweet_reducer";
+import news from "./news";
 
 const rootReducer = combineReducers({
   coronaData,
-  tweets
+  news
 });
 
 export default rootReducer;

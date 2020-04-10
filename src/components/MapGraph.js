@@ -1,7 +1,5 @@
 import React from "react";
-// import L from "leaflet";
-import { Map, TileLayer, Marker, Popup, icon } from "react-leaflet";
-// const = ReactLeaflet;
+import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import { iconPerson } from "./Icon";
 class MapGraph extends React.Component {
   constructor() {
@@ -68,9 +66,9 @@ class MapGraph extends React.Component {
     }
   }
   render() {
-    console.log(this.props.data);
+    // console.log(this.props.data);
     var points = this.props.data.death;
-    console.log(points);
+    // console.log(points);
     return (
       <Map center={[0, 0]} zoom={this.state.zoom}>
         <TileLayer

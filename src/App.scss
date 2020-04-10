@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap");
 $primary-main: #303a52;
 $primary-dark: #202c49;
 $primary-light: #656f86;
@@ -12,6 +13,11 @@ $teriary-light: #222;
 $green: #65e670;
 $red: #c7312c;
 $darl: rgb(41, 10, 3);
+$gradient-color: linear-gradient(
+  90deg,
+  rgba(255, 88, 88, 0.8),
+  rgba(240, 152, 25, 0.8)
+);
 
 .leaflet-container {
   height: 95%;
@@ -166,13 +172,10 @@ tside {
   position: relative;
   // z-index: 5;
 }
+.scroller-fix {
+  overflow: auto;
+}
 
-/* Show the tooltip text when you mouse over the tooltip container */
-// .tooltip:hover .tooltiptext {
-//   visibility: visible;
-//   z-index: 10;
-//   width: 250px;
-// }
 @media only screen and (min-width: 1490px) {
   html,
   body {
@@ -416,4 +419,8 @@ tside {
   color: $primary-light;
   font-size: 1rem;
   font-weight: 700;
+}
+//card
+.card-wrapper {
+  margin: 0 0.25rem 0.5rem 0.25rem;
 }
