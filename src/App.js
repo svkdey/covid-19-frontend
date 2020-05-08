@@ -7,7 +7,7 @@ import {
   recoveryCases
 } from "./actions/corona_data_actions";
 import { fetchNews } from "./actions/news";
-// import _ from "lodash";
+
 import { groupByID } from "./utils";
 import Header from "./components/partials/Header";
 import List from "./components/List";
@@ -23,10 +23,11 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
+    var key = process.env.REACT_APP_API_NEWS_key;
     this.props.dispatch(deathCases());
     this.props.dispatch(confirmCases());
     this.props.dispatch(recoveryCases());
-    this.props.dispatch(fetchNews());
+    this.props.dispatch(fetchNews(key));
     this.setState({ loading: false });
   }
   sumOfObject(obj) {

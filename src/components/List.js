@@ -14,7 +14,6 @@ export default function List(props) {
       temp.push(obj);
     }
     return temp;
-    //  return res;
   };
   const fetchHeading = (confirmsum, deathsum, recoversum) => {
     return (
@@ -32,7 +31,6 @@ export default function List(props) {
           ? data.map((item, key) => {
               return (
                 <ListGroupItem key={key}>
-                  {/* {item.name} */}
                   <div className="listgroupItem-heading ">{item.name}</div>
                   <div className="listgroupItem">
                     <div className="listgroupItem-box">{item.confirm}</div>

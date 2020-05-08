@@ -1,0 +1,37 @@
+import React from "react";
+import {
+  Card,
+  CardBody,
+  Button,
+  CardTitle,
+  CardText,
+  CardImg
+} from "reactstrap";
+
+export default function CustomCard(props) {
+  return (
+    <div className="card-wrapper">
+      <Card>
+        <CardImg
+          top
+          width="100%"
+          src={props.data.urlToImage}
+          alt="Card image cap"
+        />
+        <CardBody>
+          <CardTitle>
+            <strong>{props.data.title}</strong>
+          </CardTitle>
+          <CardText>
+            <small>{props.data.description} </small>
+          </CardText>
+          <CardText>
+            <Button outline color="danger">
+              <a href={props.data.url}>Read Full content</a>
+            </Button>
+          </CardText>
+        </CardBody>
+      </Card>
+    </div>
+  );
+}

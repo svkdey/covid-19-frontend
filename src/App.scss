@@ -11,7 +11,7 @@ $teriary-main: rgb(255, 252, 237);
 $teriary-dark: rgb(255, 239, 228);
 $teriary-light: #222;
 $orange: orange;
-$green: #65e670;
+$green: #142850;
 $red: #c7312c;
 $darl: rgb(41, 10, 3);
 
@@ -22,14 +22,10 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Sen", sans-serif;
+  font-family: "Muli", sans-serif;
   letter-spacing: 0.3px;
-
   line-height: 1.2rem;
-  // background-color: #656f86;
-
-  // color: #eee;
-  // margin: 0.2%;
+  // background-color: $teriary-light;
 }
 .loading {
   width: 100%;
@@ -110,7 +106,7 @@ tside {
 .box .confirmCls,
 .box .deadCls,
 .box .recoverdCls {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin: 0rem 0rem;
 }
@@ -144,10 +140,10 @@ tside {
   margin-bottom: 0.5rem;
   .header-container-left {
     width: 95%;
-    color: $teriary-dark;
+    // color: $teriary-dark;
     // color: white;
     font-size: 1.5rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
   .header-container-right {
     width: 5%;
@@ -176,16 +172,7 @@ tside {
   // z-index: 5;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
-// .tooltip:hover .tooltiptext {
-//   visibility: visible;
-//   z-index: 10;
-//   width: 250px;
-// }
 @media only screen and (min-width: 1490px) {
-  .wrapper {
-    margin: 0 0.5rem;
-  }
   html,
   body {
     overflow: hidden;
@@ -199,7 +186,7 @@ tside {
   .main-container {
     width: 100%;
     height: 95vh;
-    margin: 0 auto;
+    margin: 0 0.25rem;
     display: flex;
     flex-direction: row;
   }
@@ -237,13 +224,13 @@ tside {
   // list
 }
 @media only screen and (min-width: 768px) and (max-width: 1490px) {
-  .wrapper {
-    margin: 0 0.25rem;
-  }
+  // .wrapper {
+  //   margin: 0 0.25rem;
+  // }
   .main-container {
     width: 100%;
     height: 95vh;
-    margin: 0 auto;
+    margin: 0 0.25rem;
     display: flex;
     flex-direction: column;
   }
@@ -355,9 +342,9 @@ tside {
 }
 
 @media only screen and (max-width: 768px) {
-  .wrapper {
-    margin: 0 0.25rem;
-  }
+  // .wrapper {
+  //   margin: 0 0.25rem;
+  // }
   html,
   body {
     font-size: 0.8rem;
@@ -368,7 +355,7 @@ tside {
   .main-container {
     width: 100%;
     height: 95vh;
-    margin: 0 auto;
+    margin: 0 0.25rem;
     display: flex;
     flex-direction: column;
   }
