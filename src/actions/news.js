@@ -6,7 +6,8 @@ export function fetchNews(key) {
     try {
       setNewsLoading();
       const res = await axios.get(
-        "https://newsapi.org/v2/top-headlines?q=covid&country=in&apiKey=" + key
+        "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?q=covid&country=in&apiKey=" +
+          key
       );
       dispatch({
         type: "NEWS",
