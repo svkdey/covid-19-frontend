@@ -12,12 +12,7 @@ export default function CustomCard(props) {
   return (
     <div className="card-wrapper">
       <Card>
-        <CardImg
-          top
-          width="100%"
-          src={props.data.urlToImage}
-          alt="Card image cap"
-        />
+        <CardImg top width="100%" src={props.data.image} alt="Card image cap" />
         <CardBody>
           <CardTitle>
             <strong>{props.data.title}</strong>
