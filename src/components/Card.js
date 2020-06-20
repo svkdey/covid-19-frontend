@@ -11,9 +11,9 @@ import {
 export default function CustomCard(props) {
   return (
     <div className="card-wrapper">
-      <Card>
+      <Card className="card-w">
         <CardImg top width="100%" src={props.data.image} alt="Card image cap" />
-        <CardBody>
+        <CardBody className="card-main">
           <CardTitle>
             <strong>{props.data.title}</strong>
           </CardTitle>

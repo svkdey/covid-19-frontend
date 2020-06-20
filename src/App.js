@@ -98,18 +98,7 @@ class App extends React.Component {
         </div>
       );
     }
-    // console.log(news);
-    // if (this.state.loading)
-    //   return (
-    //     <div>
-    //       <Loading type="Bars" color="red" />
-    //       <h1>Loading</h1>
-    //     </div>
-    //   );
-    // else {
-    //   // <SimpleExample />;
-    //  ;
-    // }
+   
   }
 }
 const mapStateToProps = (state, ownProps) => {

@@ -30,7 +30,7 @@ export default function List(props) {
         {data.length > 0
           ? data.map((item, key) => {
               return (
-                <ListGroupItem key={key}>
+                <ListGroupItem key={key} className="list-main">
                   <div className="listgroupItem-heading ">{item.name}</div>
                   <div className="listgroupItem">
                     <div className="listgroupItem-box">{item.confirm}</div>
