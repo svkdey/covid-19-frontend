@@ -33,9 +33,9 @@ export default function List(props) {
                 <ListGroupItem key={key}>
                   <div className="listgroupItem-heading ">{item.name}</div>
                   <div className="listgroupItem">
-                    <div className="listgroupItem-box">{item.confirm}</div>
-                    <div className="listgroupItem-box">{item.death}</div>
-                    <div className="listgroupItem-box">{item.recovery}</div>
+                    <div className="listgroupItem-box">{item.confirm===0?item.confirm:"Unknown"}</div>
+                    <div className="listgroupItem-box">{item.death===0?item.death:"unknown"}</div>
+                    <div className="listgroupItem-box">{item.recovery===0?item.recovery:"Unknown"}</div>
                   </div>
                 </ListGroupItem>
               );
